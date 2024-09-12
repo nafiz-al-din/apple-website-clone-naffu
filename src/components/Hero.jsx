@@ -6,7 +6,8 @@ import { heroVideo, smallHeroVideo } from '@/utils'
 
 const Hero = () => {
   useGSAP(() => {
-    gsap.to('#hero-title', { opacity: 1, delay: 1.5, animationDuration: 1, ease: 'power3.in' })
+    gsap.to('#hero-title', { opacity: 1, delay: 2, animationDuration: 1, ease: 'power3.in' })
+    gsap.to('#cta', { y: -50, opacity: 1, delay: 2.2, animationDuration: 1, display: 'flex', ease: 'power3.in' })
   }, [])
 
   const [videoSrc, setVideoSrc] = useState(heroVideo)
@@ -37,6 +38,11 @@ const Hero = () => {
             <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
+      </div>
+
+      <div id="cta" className="hidden flex-col items-center opacity-0 translate-y-20 relative">
+        <a href="#highlights" className='btn'>Buy</a>
+        <p className="font-normal text-xl">From @199/month or $999</p>
       </div>
     </section>
   )
