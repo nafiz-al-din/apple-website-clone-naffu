@@ -2,9 +2,9 @@ import React from 'react'
 
 const Highlights = () => {
   return (
-    <div>
+    <section id='highlights'>
         Highlights
-    </div>
+    </section>
   )
 }
 
